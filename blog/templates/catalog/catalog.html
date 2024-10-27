@@ -10,7 +10,7 @@
         <h3>{{ item.title }}</h3>
         <p>{{ item.date }}</p>
         <p>{{ item.summary }}</p>
-        <p><a href="{% url 'item:article' %}">Read more..</a></p>
+        <p><a href="{% url 'catalog:article' item.id %}">Read more..</a></p>
       </article>
     {% endfor %}
   </section>

@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block content %}
   <section>
-    <h2>{{ catalog.title }}</h2>
-    <p>{{ catalog.date }}</p>
-    <p>{{ catalog.text }}</p>
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.date }}</p>
+    <p>{{ article.text }}</p>
+    {% if article.image %}
+      <div>
+        <img src="{{ article.image.url }}" alt="Lamprey">
+      </div>
+    {% endif %}
   </section> 
+{% endblock content %}
 
     {% comment %} <section id="contact">
     <h2>Contact Me</h2>
@@ -23,5 +30,3 @@
       <button type="submit">Send Message</button>
     </form>
   </section> {% endcomment %}
-{% block content %}
-{% endblock content %}
