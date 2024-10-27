@@ -5,4 +5,5 @@ app_name = 'catalog'
 
 urlpatterns = [
     path('', views.catalog, name='catalog'),
+    path('<int:pk>/', views.article, name='article')
 ]

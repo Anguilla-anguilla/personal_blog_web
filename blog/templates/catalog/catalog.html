@@ -2,10 +2,6 @@
 {% load static %}
 
 {% block content %}
-  {% comment %} <section id="home">
-    <h2>Welcome to My Blog</h2>
-    <p>Here you can find the latest updates and posts.</p>
-  </section> {% endcomment %}
 
   <section id="blog">
     <h2>Blog Posts</h2>
@@ -14,25 +10,9 @@
         <h3>{{ item.title }}</h3>
         <p>{{ item.date }}</p>
         <p>{{ item.summary }}</p>
-        <p><a href=#>Read more..</a></p>
+        <p><a href="{% url 'item:article' %}">Read more..</a></p>
       </article>
     {% endfor %}
   </section>
 
-  {% comment %} <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out to me through the following contact form or social media links.</p>
-    <form action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section> {% endcomment %}
 {% endblock content %}
