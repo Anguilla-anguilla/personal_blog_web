@@ -12,21 +12,34 @@
       </div>
     {% endif %}
   </section> 
-{% endblock content %}
+  <section id="contact">
 
-    {% comment %} <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out to me through the following contact form or social media links.</p>
-    <form action="#" method="post">
-      <label for="name">Name:</label>
+    <h2>Comments:</h2>
+    <form method="post">
+      {% csrf_token %}
+      {% comment %} <div>Name: {{ form.name }}</div>
+      <div>
+        <p>Comment: </p>
+        {{ form.comment }} {% endcomment %}
+      </div>
+       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea> 
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send Message</button>
+      <button type="submit">Submit</button>
     </form>
-  </section> {% endcomment %}
+  </section> 
+   
+{% for comment in comments %}
+    <section>
+      <h3>{{ comment.name }}</h3>
+      <p>{{ comment.date }}</p>
+      <p>{{ comment.comment }}</p>
+    </section>
+  {% empty %}
+  <p>No comments yet.</p>
+  {% endfor %}
+  
+{% endblock content %}

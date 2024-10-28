@@ -17,3 +17,22 @@ class Article(models.Model):
     def __str__(self):
         title = self.title
         return title
+
+
+class Comments(models.Model):
+    name = models.CharField(max_length=125, verbose_name='username')
+    comment = models.TextField(verbose_name='comment')
+    date = models.DateTimeField(auto_now_add=True, verbose_name='comment creation date')
+    article_id = models.ForeignKey(
+                                    to=Article,
+                                    on_delete=models.CASCADE,
+                                    verbose_name='article'
+                                    )
+
+    class Meta:
+        verbose_name = 'comment'
+        verbose_name_plural = 'comments'
+
+    def __str__(self):
+        return f'{self.name} on {self.article_id.title}'
+    
