@@ -1,15 +1,21 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Article, Comments
 from .forms import CommentForm
+from .utils import search_query
 
 
 def catalog(request, pk=None):
     template = 'catalog/catalog.html'
 
+    query = request.GET.get('query', None)
+
     if pk is None:
         catalog = Article.objects.all().order_by('date')
     else:
         catalog = Article.objects.filter(category_id__id=pk).order_by('date')
+    
+    if query:
+        catalog = search_query(query)
 
     context = {'catalog': catalog}
     return render(request, template, context)
