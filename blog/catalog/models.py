@@ -1,6 +1,17 @@
 from django.db import models
 
 
+class Categories(models.Model):
+    category = models.CharField(max_length=125, verbose_name='category')
+    
+    class Meta:
+        verbose_name = 'category'
+        verbose_name_plural = 'categories'
+    
+    def __str__(self):
+        return self.category
+
+
 class Article(models.Model):
     title = models.CharField(max_length=125, verbose_name='title')
     summary = models.TextField(verbose_name='summary')
@@ -9,6 +20,11 @@ class Article(models.Model):
     image = models.ImageField(blank=True,
                               upload_to='img',
                               verbose_name='image')
+    category_id = models.ForeignKey(
+                                    to=Categories,
+                                    on_delete=models.CASCADE,
+                                    verbose_name='category',
+                                    )
 
     class Meta:
         verbose_name = 'article'

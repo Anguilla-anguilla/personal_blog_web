@@ -3,9 +3,13 @@ from .models import Article, Comments
 from .forms import CommentForm
 
 
-def catalog(request):
+def catalog(request, pk=None):
     template = 'catalog/catalog.html'
-    catalog = Article.objects.all().order_by('date')
+
+    if pk is None:
+        catalog = Article.objects.all().order_by('date')
+    else:
+        catalog = Article.objects.filter(category_id__id=pk).order_by('date')
 
     context = {'catalog': catalog}
     return render(request, template, context)
