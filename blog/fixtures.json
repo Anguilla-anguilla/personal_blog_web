@@ -1,0 +1,128 @@
+[
+{
+    "model": "catalog.categories",
+    "pk": 1,
+    "fields": {
+        "category": "Python"
+    }
+},
+{
+    "model": "catalog.categories",
+    "pk": 2,
+    "fields": {
+        "category": "Other"
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 1,
+    "fields": {
+        "title": "Overview of Django",
+        "summary": "Django is a free and open-source web framework written in Python. It follows the Model-View-Controller (MVC) architectural pattern, specifically the Model-View-Template (MVT) variation. Django is designed to help developers take applications from concept to completion as quickly as possible. It emphasizes reusability and \"pluggability\" of components, less code, low coupling, and the principle of don't repeat yourself (DRY).",
+        "date": "2023-03-06",
+        "text": "<ul>\r\n\t<li><strong>Rapid Development:</strong> Django allows for rapid development by providing a lot of built-in functionality, reducing the amount of code you need to write.</li>\r\n\t<li><strong>ORM (Object-Relational Mapping):</strong> Django&#39;s ORM allows you to interact with your database using Python code instead of SQL.</li>\r\n\t<li><strong>Admin Interface:</strong> Django comes with a fully-featured admin interface that is dynamically generated and provides CRUD (Create, Read, Update, Delete) operations for your models.</li>\r\n\t<li><strong>Authentication:</strong> Built-in authentication system that supports user authentication, permissions, and session management.</li>\r\n\t<li><strong>URL Routing:</strong> A powerful URL routing system that allows you to design clean and SEO-friendly URLs.</li>\r\n\t<li><strong>Template Engine:</strong> A flexible template system that allows you to separate the design from the code.</li>\r\n\t<li><strong>Security: </strong>Django provides robust security features, including protection against common web vulnerabilities like SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF).</li>\r\n\t<li><strong>Scalability:</strong> Django is designed to handle large-scale applications and can be scaled to meet high traffic demands..</li>\r\n</ul>",
+        "image": "",
+        "category_id": 1
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 2,
+    "fields": {
+        "title": "Overview of Java",
+        "summary": "Java is a general-purpose, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It was originally developed by James Gosling at Sun Microsystems and released in 1995. Java is widely used for developing enterprise-scale applications, mobile applications (Android), web applications, and more.",
+        "date": "2024-07-16",
+        "text": "<ol>\r\n\t<li><strong>Key Features Platform Independence:</strong> Java code is compiled into bytecode, which can run on any device with a Java Virtual Machine (JVM). This is often referred to as &quot;Write Once, Run Anywhere&quot; (WORA).</li>\r\n\t<li><strong>Object-Oriented:</strong> Java is designed around the concept of objects, which contain data and methods to operate on that data.</li>\r\n\t<li><strong>Robust and Secure: </strong>Java includes features like garbage collection, exception handling, and strong type checking to ensure robust and secure code.</li>\r\n\t<li><strong>Multithreading: </strong>Java supports multithreading, allowing concurrent execution of two or more parts of a program for maximum utilization of CPU.</li>\r\n\t<li><strong>Rich Standard Library:</strong> Java comes with a comprehensive standard library that provides a wide range of functionalities, from basic data structures to networking and GUI development.</li>\r\n\t<li><strong>Community and Ecosystem: </strong>Java has a large and active community, extensive documentation, and a vast ecosystem of third-party libraries and tools.</li>\r\n</ol>",
+        "image": "",
+        "category_id": 2
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 3,
+    "fields": {
+        "title": "Python",
+        "summary": "Python is a high-level, interpreted programming language known for its simplicity and readability. Created by Guido van Rossum and first released in 1991, Python emphasizes code readability with its use of significant indentation. It is widely used in various domains, including web development, data science, artificial intelligence, automation, and more.",
+        "date": "2024-11-03",
+        "text": "<ol>\r\n\t<li><strong>Key Features Readability:</strong> Python&#39;s syntax is designed to be clear and concise, making it easy to read and write.</li>\r\n\t<li><strong>Interpreted Language:</strong> Python code is executed line by line, which allows for rapid development and testing.</li>\r\n\t<li><strong>Dynamically Typed:</strong> Variables in Python do not need to be declared with a specific type and can change type after they have been set.</li>\r\n\t<li><strong>Object-Oriented:</strong> Python supports object-oriented programming, allowing for the creation of classes and objects.</li>\r\n\t<li><strong>Extensive Libraries:</strong> Python has a rich standard library and a vast ecosystem of third-party packages, making it highly versatile.</li>\r\n\t<li><strong>Cross-Platform:</strong> Python is available on various operating systems, including Windows, macOS, and Linux.</li>\r\n</ol>",
+        "image": "",
+        "category_id": 1
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 4,
+    "fields": {
+        "title": "Why Java is not as good as Python?",
+        "summary": "The comparison between Java and Python often depends on the specific use case, developer preferences, and project requirements. Both languages have their strengths and weaknesses. Here are some reasons why some people might argue that Python is better than Java, along with some counterpoints.",
+        "date": "2024-11-03",
+        "text": "<p><strong>Reasons Why Python Might Be Preferred Over Java </strong></p>\r\n\r\n<p><strong>Ease of Learning and Readability:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Python:</strong> Python&#39;s syntax is designed to be simple and readable, making it easier for beginners to learn and write code.</li>\r\n\t<li><strong>Java:</strong> Java has a more verbose syntax with more boilerplate code, which can be overwhelming for beginners.</li>\r\n</ul>\r\n\r\n<p><strong>Development Speed:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Python:</strong> Python&#39;s dynamic typing and concise syntax allow for faster development cycles.</li>\r\n\t<li><strong>Java:</strong> Java&#39;s static typing and more explicit syntax can lead to longer development times.</li>\r\n</ul>\r\n\r\n<p><strong>Dynamic Typing:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Python:</strong> Python is dynamically typed, meaning you don&#39;t need to declare variable types explicitly, which can save time and reduce code complexity.</li>\r\n\t<li><strong>Java:</strong> Java is statically typed, which can lead to more verbose code and requires more upfront planning.</li>\r\n</ul>\r\n\r\n<p><strong>Community and Ecosystem:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Python:</strong> Python has a large and active community, with extensive libraries for data science, machine learning, web development, and more.</li>\r\n\t<li><strong>Java: </strong>Java also has a large community and extensive libraries, but Python&#39;s ecosystem is particularly strong in data science and machine learning.</li>\r\n</ul>\r\n\r\n<p><strong>Interactivity and Scripting:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Python:</strong> Python is often used for scripting and interactive development, thanks to tools like Jupyter Notebook and its REPL (Read-Eval-Print Loop).</li>\r\n\t<li><strong>Java:</strong> Java is less commonly used for scripting and interactive development, though tools like JShell have been introduced to address this.</li>\r\n</ul>\r\n\r\n<p><strong>Web Development: </strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Python:</strong> Python frameworks like Django and Flask are known for their simplicity and ease of use, making web development faster and more straightforward.</li>\r\n\t<li><strong>Java:</strong> Java frameworks like Spring are powerful but can be more complex and require more setup.</li>\r\n</ul>",
+        "image": "",
+        "category_id": 1
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 5,
+    "fields": {
+        "title": "Why Python is not as good as Java?",
+        "summary": "Well, because..",
+        "date": "2024-11-03",
+        "text": "<p><strong>Performance:</strong>&nbsp;</p>\r\n\r\n<ul>\r\n\t<li><strong>Java:</strong> Java&#39;s performance is generally better than Python&#39;s, especially for CPU-intensive tasks. Java&#39;s Just-In-Time (JIT) compilation can lead to faster execution times.</li>\r\n\t<li><strong>Python:</strong> Python&#39;s performance is generally slower, though it can be optimized with libraries like NumPy and by using compiled extensions.</li>\r\n</ul>\r\n\r\n<p><strong>Static Typing and Tooling:</strong>&nbsp;</p>\r\n\r\n<ul>\r\n\t<li><strong>Java:</strong> Java&#39;s static typing allows for better tooling support, including advanced IDE features like code completion, refactoring, and static analysis.</li>\r\n\t<li><strong>Python:</strong> Python&#39;s dynamic typing can lead to more runtime errors and less robust tooling support.</li>\r\n</ul>\r\n\r\n<p><strong>Enterprise and Large-Scale Applications:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Java:</strong> Java is widely used in enterprise environments for its robustness, scalability, and strong support for concurrency.</li>\r\n\t<li><strong>Python:</strong> While Python is used in enterprise settings, Java is often preferred for large-scale, mission-critical applications.</li>\r\n</ul>\r\n\r\n<p><strong>Mobile Development:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Java:</strong> Java is the primary language for Android app development, giving it a significant advantage in this domain.</li>\r\n\t<li><strong>Python:</strong> Python is not as commonly used for mobile development, though frameworks like Kivy and BeeWare are available.</li>\r\n</ul>\r\n\r\n<p><strong>Concurrency and Multithreading:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>Java</strong>: Java has strong support for multithreading and concurrency, making it suitable for high-performance, concurrent applications.</li>\r\n\t<li><strong>Python:</strong> Python&#39;s Global Interpreter Lock (GIL) can limit the effectiveness of multithreading, though multiprocessing and asynchronous programming can help.</li>\r\n</ul>",
+        "image": "",
+        "category_id": 2
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 6,
+    "fields": {
+        "title": "How to center div",
+        "summary": "Centering a div (or any block-level element) can be done in several ways depending on the layout you want to achieve. Below are some common methods to center a div both horizontally and vertically.",
+        "date": "2024-10-15",
+        "text": "Ahh.. never mind. Just ask someone else to do it.",
+        "image": "",
+        "category_id": 2
+    }
+},
+{
+    "model": "catalog.comments",
+    "pk": 15,
+    "fields": {
+        "name": "Frontender",
+        "comment": "=(",
+        "date": "2024-11-03T21:01:25.658Z",
+        "article_id": 6
+    }
+},
+{
+    "model": "catalog.comments",
+    "pk": 16,
+    "fields": {
+        "name": "Pythonist",
+        "comment": "Still Python is better than Java.",
+        "date": "2024-11-03T21:02:42.107Z",
+        "article_id": 5
+    }
+},
+{
+    "model": "catalog.comments",
+    "pk": 17,
+    "fields": {
+        "name": "Javist",
+        "comment": "No, it's not.",
+        "date": "2024-11-03T21:03:04.551Z",
+        "article_id": 5
+    }
+},
+{
+    "model": "catalog.comments",
+    "pk": 18,
+    "fields": {
+        "name": "JavaScripter",
+        "comment": "^____^",
+        "date": "2024-11-03T21:04:12.273Z",
+        "article_id": 5
+    }
+}
+]
