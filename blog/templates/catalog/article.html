@@ -5,7 +5,7 @@
   <section>
     <h2>{{ article.title }}</h2>
     <p>{{ article.date }}</p>
-    <p>{{ article.text }}</p>
+    <p>{{ article.text|safe }}</p>
     {% if article.image %}
       <div>
         <img src="{{ article.image.url }}" alt="Lamprey">

@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 
 class Categories(models.Model):
     category = models.CharField(max_length=125, verbose_name='category')
@@ -16,7 +16,7 @@ class Article(models.Model):
     title = models.CharField(max_length=125, verbose_name='title')
     summary = models.TextField(verbose_name='summary')
     date = models.DateField(verbose_name='date of publishing')
-    text = models.TextField(verbose_name='text')
+    text = RichTextField(verbose_name='text')
     image = models.ImageField(blank=True,
                               upload_to='img',
                               verbose_name='image')
