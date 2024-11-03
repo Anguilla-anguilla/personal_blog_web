@@ -102,3 +102,36 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Pagination style */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#pageNumber {
+    font-size: 18px;
+    color: white;
+}
+
+button.active {
+    background-color: #5a5a5a;
+}
+
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
 from .models import Article, Comments
 from .forms import CommentForm
 from .utils import search_query
@@ -17,7 +18,11 @@ def catalog(request, pk=None):
     if query:
         catalog = search_query(query)
 
-    context = {'catalog': catalog}
+    paginator = Paginator(catalog, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {'catalog': page_obj}
     return render(request, template, context)
 
 

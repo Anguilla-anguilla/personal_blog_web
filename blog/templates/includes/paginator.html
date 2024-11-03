@@ -1,0 +1,26 @@
+{% load static %}
+<div class="container">
+  <div class="pagination">
+    {% if catalog.has_previous %}
+    <a href="?page={{ catalog.previous_page_number }}">
+      <button id="prevBtn">Previous</button>
+    </a>
+    {% endif %}
+    {% for i in catalog.paginator.page_range %}
+      {% if catalog.number == i %}
+      <button class="active">
+        <span id="pageNumber">{{ i }}</span>
+      </button>
+      {% else %}
+        <button>
+          <a id="pageNumber" href="?page={{ i }}">{{ i }}</a>
+        </button>
+      {% endif %}
+    {% endfor %}
+    {% if catalog.has_next %}
+    <a href="?page={{ catalog.next_page_number }}">
+      <button id="nextBtn">Next</button>
+    </a>
+    {% endif %}
+  </div>
+</div>
