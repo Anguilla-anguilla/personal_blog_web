@@ -1,6 +1,6 @@
 # Personal blog
 
-A blog web page built with Django, featuring admin authentication, rich text editing, and simple design.
+A blog web page built with Django, featuring admin authentication, rich text editing and simple design.
 
 ## Features
 - **Rich Text Editing**: Utilizes CKEditor for rich text editing in blog posts.
